@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Built by MD.Nirob -->
+<paths>
+    <cache-path name="pdf_cache" path="pdfs/" />
+    <cache-path name="captures_cache" path="captures/" />
+    <cache-path name="shared_cache" path="." />
+</paths>

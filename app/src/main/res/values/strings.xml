@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Https_Browser</string>
+    <string name="new_dev_tools_title">Dev Tools</string>
+    <string name="new_inspect_element">Inspect</string>
+    <string name="new_file_open_unsupported">This file type is not supported.</string>
+    <string name="new_offline_title">No internet connection</string>
+    <string name="new_offline_sub">Try checking your connection</string>
+    <string name="new_offline_reload">Reload</string>
+    <string name="new_menu_passwords">Passwords</string>
+    <string name="new_password_manager_unavailable">No password manager found on this device.</string>
+    <string name="new_pdf_loading">Loading PDF...</string>
+    <string name="new_pdf_error">Failed to load PDF.</string>
+    <string name="new_pdf_password_required">Password-protected PDF is not supported directly.</string>
+    <string name="new_pdf_open_system">Open in system viewer</string>
+    <string name="new_menu_pip">Picture-in-Picture</string>
+    <string name="new_pip_play_pause">Play / Pause</string>
+    <string name="new_pip_mute">Mute / Unmute</string>
+    <string name="new_pip_unavailable">Picture-in-Picture is not supported on this device.</string>
+    <string name="new_menu_reader_mode">Reader Mode</string>
+    <string name="new_reader_mode_title">Reader Mode</string>
+    <string name="new_reader_extract_failed">Could not extract readable article from this page.</string>
+    <string name="new_menu_capture_page">Capture &amp; Export PDF</string>
+    <string name="new_capture_preview_title">Page Capture Preview</string>
+    <string name="new_capture_save_png">Save PNG</string>
+    <string name="new_capture_export_pdf">Export PDF</string>
+    <string name="new_capture_share">Share</string>
+    <string name="new_capture_failed">Unable to capture page.</string>
+    <string name="new_menu_reading_list">Reading List</string>
+    <string name="new_reading_list_title">Reading List</string>
+    <string name="new_reading_list_save">Save Current Page</string>
+    <string name="new_reading_list_saved">Saved to Reading List for offline reading.</string>
+    <string name="new_menu_sessions">Session Manager</string>
+    <string name="new_sessions_title">Session Manager</string>
+    <string name="new_sessions_save">Save Current Session</string>
+    <string name="new_sessions_restore">Restore</string>
+</resources>

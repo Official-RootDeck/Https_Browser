@@ -1,0 +1,107 @@
+<!-- Built by MD.Nirob -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>No internet connection</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #F7F7F7;
+      color: #202124;
+      font-family: Roboto, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 24px 16px;
+      overflow-x: hidden;
+    }
+    .top-section {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+      padding: 0 8px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #202124;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 14px;
+      color: #5F6368;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .reload-btn {
+      display: inline-block;
+      background-color: #1A73E8;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .reload-btn:hover {
+      background-color: #1557B0;
+    }
+    .dino-container {
+      width: 100%;
+      max-width: 600px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 280px;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-section">
+    <h1 id="offlineTitle">No internet connection</h1>
+    <p id="offlineSub">Try checking your connection</p>
+    <a href="#" id="reloadLink" class="reload-btn">Reload</a>
+  </div>
+
+  <div class="dino-container" id="dinoWrapper" title="Tap to play Dino Game">
+    <iframe id="dinoFrame" src="dino/index.html" scrolling="no"></iframe>
+  </div>
+
+  <script>
+    (function() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const originalUrl = params.get('url') || 'chrome://newtab';
+        const reloadBtn = document.getElementById('reloadLink');
+        if (reloadBtn) {
+          reloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'reload:' + originalUrl;
+          });
+        }
+      } catch (err) {
+        console.error('Error in offline error page init', err);
+      }
+    })();
+  </script>
+</body>
+</html>

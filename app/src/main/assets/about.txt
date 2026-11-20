@@ -1,0 +1,53 @@
+========================================
+HTTPS_BROWSER
+Built by RootDeck-Org
+========================================
+
+Version: 1.0.0-PRO
+Engine: Standalone Chromium Engine (M124)
+Target Platform: Android 5.1+ (API 22-36)
+Security: Strict TLS 1.3/1.2 & Local DNS Blackhole
+Architecture: Multi-Process Isolation & Low-Memory GZIP Tab Pagefile
+
+----------------------------------------
+ABOUT THIS BROWSER
+----------------------------------------
+Https_Browser is a high-performance, security-hardened,
+standalone Chromium browser designed and maintained by RootDeck-Org.
+
+KEY FEATURES:
+• Chrome M124 User Interface: 1:1 pixel-accurate layout including
+  integrated Omnibox with real-time SSL security indicators,
+  two-column tab grid switcher, and adaptive theme styling.
+• Low-Memory Architecture: Automated background tab hibernation
+  with compressed GZIP pagefiles on disk, allowing extensive multi-tab
+  workflows without exceeding RAM budgets on resource-constrained devices.
+• Built-in Developer Tools (Dev Tools):
+  - Elements: Live DOM hierarchy tree inspector with style/attribute inspection.
+  - Console: Interactive JavaScript REPL with live runtime message logs.
+  - Network: Real-time HTTP/HTTPS request waterfall with duration timing.
+  - Application: Comprehensive Cookies, LocalStorage & SessionStorage inspector.
+  - Cookies Viewer: Inspect and manage origin cookies with granular removal.
+  - Security: TLS certificate state and mixed content detection.
+• DNS Blackhole Tracking Protection: Intercepts and drops tracker,
+  ad telemetry, and analytics domains prior to network dispatch.
+• Offline Capability: Embedded offline Chrome Dino T-Rex game
+  and offline page snapshot archive.
+• Privacy Guard: Incognito browsing with FLAG_SECURE window masking
+  and zero persistent disk history or cache writes.
+• Password Manager Support (new_google_pm_note):
+  Integrates with Google Password Manager and Android OS Credential Manager
+  for autofill on login forms and account management.
+• Legacy Pointer Events Workaround (new_legacy_webview_note):
+  Includes automated polyfill and touch normalization for Android 5.1 WebView
+  devices to ensure interactive web application compatibility.
+• Built-in Document & PDF Viewer:
+  Integrated local rendering for .html, .mhtml, .link shortcuts, and PDF documents.
+
+----------------------------------------
+ROOTDECK-ORG
+Cybersecurity, Embedded Systems & Open Tools
+Website: https://rootdeck.org
+Developer Contact: dev@rootdeck.org
+========================================
+Built by MD.Nirob
