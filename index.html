@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy Policy for Https Browser, an Android web browser published by MD.Nirob under RootDeck.">
+  <title>Privacy Policy — Https Browser | RootDeck</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f5f7fa;
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+      --text: #172033;
+      --muted: #586579;
+      --line: #e3e8ef;
+      --accent: #2457c5;
+      --accent-soft: #edf3ff;
+      --notice: #fff8e8;
+      --notice-line: #ecd79e;
+      --shadow: 0 12px 32px rgba(20, 35, 60, .06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --page: #10151d;
+        --surface: #171f2b;
+        --surface-soft: #1d2735;
+        --text: #e8edf5;
+        --muted: #aab6c7;
+        --line: #2b3747;
+        --accent: #91b4ff;
+        --accent-soft: #1c2c49;
+        --notice: #30291b;
+        --notice-line: #66552c;
+        --shadow: 0 12px 32px rgba(0, 0, 0, .18);
+      }
+    }
+
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --page: #f5f7fa; --surface: #fff; --surface-soft: #f8fafc;
+      --text: #172033; --muted: #586579; --line: #e3e8ef;
+      --accent: #2457c5; --accent-soft: #edf3ff;
+      --notice: #fff8e8; --notice-line: #ecd79e;
+      --shadow: 0 12px 32px rgba(20, 35, 60, .06);
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --page: #10151d; --surface: #171f2b; --surface-soft: #1d2735;
+      --text: #e8edf5; --muted: #aab6c7; --line: #2b3747;
+      --accent: #91b4ff; --accent-soft: #1c2c49;
+      --notice: #30291b; --notice-line: #66552c;
+      --shadow: 0 12px 32px rgba(0, 0, 0, .18);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font: 15px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    button, input { font: inherit; }
+    .progress {
+      position: fixed; inset: 0 auto auto 0; z-index: 20;
+      width: 0; height: 3px; background: var(--accent);
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      backdrop-filter: blur(12px);
+    }
+    .topbar-inner {
+      max-width: 1100px; margin: auto; padding: 13px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 11px; min-width: 0; }
+    .brand-mark {
+      width: 36px; height: 36px; display: grid; place-items: center;
+      border-radius: 10px; background: var(--accent-soft); color: var(--accent);
+      font-weight: 750; letter-spacing: -.04em;
+    }
+    .brand-name { font-weight: 700; letter-spacing: -.02em; }
+    .brand-sub { display: block; color: var(--muted); font-size: 12px; line-height: 1.3; }
+    .actions { display: flex; align-items: center; gap: 8px; }
+    .button {
+      border: 1px solid var(--line); background: var(--surface); color: var(--text);
+      border-radius: 9px; padding: 8px 12px; cursor: pointer; font-size: 13px;
+    }
+    .button:hover { border-color: var(--accent); }
+    .button:focus-visible, a:focus-visible, input:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent);
+      outline-offset: 2px;
+    }
+    .layout {
+      max-width: 1100px; margin: 34px auto 64px; padding: 0 22px;
+      display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 26px;
+      align-items: start;
+    }
+    .sidebar {
+      position: sticky; top: 82px; padding: 18px 15px;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 13px; box-shadow: var(--shadow);
+    }
+    .sidebar-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .sidebar h2 {
+      margin: 0 0 12px; color: var(--muted); font-size: 11px;
+      letter-spacing: .09em; text-transform: uppercase;
+    }
+    .sidebar-toggle { display: none; margin-bottom: 8px; }
+    #toc[hidden] { display: none; }
+    .sidebar nav { display: grid; gap: 3px; }
+    .sidebar a {
+      display: block; padding: 6px 8px; border-radius: 7px;
+      color: var(--muted); text-decoration: none; font-size: 13px;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      color: var(--accent); background: var(--accent-soft);
+    }
+    main {
+      min-width: 0; background: var(--surface); border: 1px solid var(--line);
+      border-radius: 15px; box-shadow: var(--shadow); overflow: hidden;
+    }
+    .hero { padding: 35px 40px 27px; border-bottom: 1px solid var(--line); }
+    .eyebrow {
+      color: var(--accent); font-size: 12px; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    h1 { margin: 8px 0 8px; font-size: clamp(29px, 5vw, 39px); line-height: 1.15; letter-spacing: -.04em; }
+    .intro { max-width: 690px; color: var(--muted); margin: 0; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 19px; color: var(--muted); font-size: 12px; }
+    .content { padding: 8px 40px 38px; }
+    .summary {
+      margin: 23px 0 28px; padding: 16px 18px; border: 1px solid var(--line);
+      border-radius: 11px; background: var(--surface-soft);
+    }
+    .summary strong { display: block; margin-bottom: 5px; }
+    .summary ul { margin: 7px 0 0; padding-left: 19px; }
+    section { padding: 19px 0 17px; border-bottom: 1px solid var(--line); scroll-margin-top: 82px; }
+    section:last-of-type { border-bottom: 0; }
+    h2 { margin: 0 0 10px; font-size: 19px; line-height: 1.35; letter-spacing: -.02em; }
+    h3 { margin: 17px 0 6px; font-size: 15px; }
+    p { margin: 8px 0; }
+    ul, ol { padding-left: 22px; margin: 8px 0 12px; }
+    li { margin: 4px 0; }
+    .muted { color: var(--muted); }
+    .callout {
+      margin: 14px 0; padding: 13px 15px; border-radius: 9px;
+      background: var(--notice); border: 1px solid var(--notice-line);
+    }
+    .callout strong { display: block; margin-bottom: 3px; }
+    .data-table {
+      width: 100%; border-collapse: collapse; margin: 13px 0;
+      font-size: 13px;
+    }
+    .data-table th, .data-table td {
+      padding: 10px 11px; border: 1px solid var(--line); text-align: left; vertical-align: top;
+    }
+    .data-table th { background: var(--surface-soft); font-weight: 650; }
+    .contact-box {
+      margin-top: 15px; padding: 15px; border: 1px solid var(--line);
+      background: var(--surface-soft); border-radius: 10px;
+    }
+    footer {
+      padding: 18px 40px; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 12px;
+    }
+    .back-top {
+      position: fixed; right: 22px; bottom: 22px; display: none;
+      border: 1px solid var(--line); border-radius: 50%; width: 42px; height: 42px;
+      background: var(--surface); color: var(--text); cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+    .back-top.visible { display: block; }
+    .no-results { display: none; padding: 22px 0; color: var(--muted); }
+    @media (max-width: 780px) {
+      .layout { display: block; margin-top: 18px; }
+      .sidebar { position: static; margin-bottom: 15px; }
+      .sidebar-toggle { display: inline-block; }
+      .sidebar nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sidebar nav a { padding: 8px; }
+      .hero { padding: 27px 23px 22px; }
+      .content { padding: 4px 23px 27px; }
+      footer { padding: 16px 23px; }
+    }
+    @media (max-width: 430px) {
+      .topbar-inner { padding: 10px 14px; }
+      .brand-sub { display: none; }
+      .actions { gap: 5px; }
+      .actions .button { padding: 7px 8px; font-size: 12px; }
+      .layout { padding: 0 12px; }
+      .sidebar nav { grid-template-columns: 1fr 1fr; }
+      .data-table { display: block; overflow-x: auto; }
+    }
+    @media print {
+      :root { color-scheme: light; --page: #fff; --surface: #fff; --text: #111; --muted: #444; --line: #ddd; }
+      body { background: white; font-size: 11pt; }
+      .topbar, .sidebar, .progress, .actions, .back-top { display: none !important; }
+      .layout { display: block; max-width: none; margin: 0; padding: 0; }
+      main { border: 0; box-shadow: none; }
+      .hero, .content, footer { padding-left: 0; padding-right: 0; }
+      section { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Https Browser privacy policy">
+        <div class="brand-mark" aria-hidden="true">HB</div>
+        <div>
+          <div class="brand-name">Https Browser</div>
+          <span class="brand-sub">Privacy Policy · RootDeck</span>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="button" type="button" id="themeButton" aria-label="Switch color theme">Dark mode</button>
+        <button class="button" type="button" id="printButton">Print / Save PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Privacy policy navigation">
+      <div class="sidebar-heading">
+        <h2>On this page</h2>
+        <button class="button sidebar-toggle" type="button" id="navToggle"
+                aria-expanded="true" aria-controls="toc">Hide</button>
+      </div>
+      <nav id="toc">
+        <a href="#overview">Overview</a>
+        <a href="#information">Information processed</a>
+        <a href="#local-storage">Local storage</a>
+        <a href="#websites">Websites and third parties</a>
+        <a href="#network">Network inspection</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#children">Children and teens</a>
+        <a href="#choices">Your choices and deletion</a>
+        <a href="#security">Security</a>
+        <a href="#retention">Retention and backups</a>
+        <a href="#changes">Policy changes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="hero">
+        <div class="eyebrow">Privacy information</div>
+        <h1>Privacy Policy</h1>
+        <p class="intro">
+          This policy explains how Https Browser handles information when you use the Android app.
+          It is written to describe the app's current implementation, including information kept on
+          your device and information that websites you visit may receive.
+        </p>
+        <div class="meta">
+          <span><strong>App:</strong> Https Browser</span>
+          <span><strong>Publisher:</strong> MD.Nirob · RootDeck</span>
+          <span><strong>Last updated:</strong> 18 November 2026</span>
+          <span><strong>Application ID:</strong> com.rootdeck.https_browser</span>
+        </div>
+      </div>
+
+      <div class="content" id="policyContent">
+        <div class="summary">
+          <strong>In short</strong>
+          <ul>
+            <li>The reviewed app stores browser information such as history, bookmarks, tabs, sessions and reading-list items locally on your device.</li>
+            <li>The reviewed source contains no app account system, advertising SDK, analytics SDK or crash-reporting service.</li>
+            <li>Websites and search providers you choose to use receive the information needed to provide their services, such as your IP address, requested URLs and applicable cookies.</li>
+            <li>Https Browser is intended for a broad audience, including younger learners, but it is not a parental-control or certified child-safe browser.</li>
+          </ul>
+        </div>
+
+        <section id="overview">
+          <h2>1. Overview and scope</h2>
+          <p>
+            Https Browser is an Android web browser published by MD.Nirob under the RootDeck project.
+            This policy describes the app source reviewed for version 1.0, application ID
+            <code>com.rootdeck.https_browser</code>.
+          </p>
+          <p>
+            The app is designed with users including children and teenagers aged 5–16 in mind.
+            Because a browser connects to websites operated by other organizations, this policy
+            distinguishes between information handled by Https Browser and information collected
+            independently by the websites, search engines, Android operating system, or other
+            services you choose to use.
+          </p>
+          <p>
+            This policy may not describe modified, unofficial, or future versions of the app.
+            If a future release adds accounts, cloud synchronization, analytics, advertising,
+            crash reporting, or other network services, this policy must be updated before that
+            release is distributed.
+          </p>
+        </section>
+
+        <section id="information">
+          <h2>2. Information Https Browser processes</h2>
+          <p>The reviewed app processes the following categories of information to provide browser features:</p>
+          <table class="data-table">
+            <thead><tr><th>Category</th><th>Examples</th><th>How it is used</th></tr></thead>
+            <tbody>
+              <tr><td>Browsing history</td><td>Page URLs, page titles and visit timestamps</td><td>To show and manage browsing history. Normal history entries are not added for pages opened in the app's incognito mode.</td></tr>
+              <tr><td>Tabs and sessions</td><td>Open tab URLs, titles, tab order and saved session details</td><td>To restore tabs and saved browsing sessions.</td></tr>
+              <tr><td>Bookmarks</td><td>Saved page URLs, titles and save timestamps</td><td>To let you return to pages.</td></tr>
+              <tr><td>Reading list</td><td>Page URL, title, excerpt and extracted article text</td><td>To save articles for later or offline reading.</td></tr>
+              <tr><td>Website storage</td><td>Cookies, local storage, session storage and cached website data</td><td>To support website sign-in, preferences and normal website operation. Websites may set their own cookies, including third-party cookies.</td></tr>
+              <tr><td>Temporary diagnostics</td><td>Network request URLs, methods, request headers, cookie values and timing metadata</td><td>To display browser network activity in the in-app developer/network inspection tools while the app is running.</td></tr>
+              <tr><td>App preference</td><td>A setting indicating whether the GitHub support prompt should be shown again</td><td>To remember your choice on the device.</td></tr>
+            </tbody>
+          </table>
+          <p>
+            The reviewed source does not show an app-operated account-registration system or a
+            developer server receiving the locally stored browsing history, bookmarks, reading
+            list or saved sessions. It also does not include an analytics, advertising or
+            crash-reporting SDK in the reviewed build configuration.
+          </p>
+          <p>
+            Https Browser does not need you to provide your name, email address, phone number or
+            date of birth to use its browser features. If you enter personal information into a
+            website, that information is handled by that website under its own terms and privacy policy.
+          </p>
+        </section>
+
+        <section id="local-storage">
+          <h2>3. Information stored on your device</h2>
+          <p>
+            Browser records are stored in the app's local database and app-specific storage.
+            This includes history, bookmarks, tabs, saved sessions, reading-list content and
+            temporary page files. Website cookies and web storage are maintained by Android
+            WebView for the sites you visit.
+          </p>
+          <p>
+            Https Browser enables JavaScript, DOM storage, form-data support and third-party cookies
+            in its WebView configuration. These features allow websites to work as expected, but
+            also mean websites may store identifiers, preferences or other information in browser
+            storage. The app also uses Android's autofill integration points; any autofill service
+            or password manager on your device is governed by that provider's own privacy terms.
+          </p>
+          <p>
+            The reviewed app does not provide a separate cloud password vault. Do not assume that
+            credentials entered on websites are stored or protected by Https Browser itself.
+          </p>
+        </section>
+
+        <section id="websites">
+          <h2>4. Websites, search providers and third parties</h2>
+          <p>
+            When you open a website, that website and its service providers may receive information
+            such as your device's IP address, requested page and resource URLs, browser and device
+            information included in standard web requests, request headers, and cookies applicable
+            to that site. They may use this information for their own functionality, analytics,
+            advertising, security or personalization.
+          </p>
+          <p>
+            The app's address/search handling uses Google Search for searches entered as search
+            terms. If you submit a search, the search terms are sent to Google, and Google's
+            privacy policy applies to that activity. You may also choose to visit other search
+            engines and websites.
+          </p>
+          <p>
+            Https Browser does not control third-party websites, their cookies, their security
+            practices, or how long they retain information. Review the privacy policy of each
+            website or service you use. A website may display advertisements even though the
+            reviewed Https Browser app itself does not include an advertising SDK.
+          </p>
+          <p>
+            The app includes a locally bundled tracker-domain blocklist. When tracking protection
+            is enabled, the browser checks requested hostnames against that local list and blocks
+            matching requests on the device. This check does not require sending your browsing
+            history to RootDeck, and it does not guarantee that all tracking is blocked.
+          </p>
+        </section>
+
+        <section id="network">
+          <h2>5. Developer tools and network inspection</h2>
+          <p>
+            Https Browser includes developer and network inspection screens. While the app is
+            running, the network inspector records request metadata in app memory. Depending on
+            the request, this can include the URL, HTTP method, request headers and cookie values,
+            plus timing and blocking information.
+          </p>
+          <div class="callout">
+            <strong>Important</strong>
+            Request headers and cookies can contain sensitive information, including session
+            identifiers. Do not share screenshots, exports, logs or screen recordings from the
+            network inspector unless you have checked them and removed private information.
+          </div>
+          <p>
+            In the reviewed implementation, these inspection records are used for the in-app
+            developer tools and are not sent to a RootDeck analytics or diagnostics server.
+            They are temporary app-memory data and may be cleared when the app or inspector state
+            is reset.
+          </p>
+        </section>
+
+        <section id="permissions">
+          <h2>6. Android permissions and device access</h2>
+          <p>The reviewed Android manifest declares these permissions:</p>
+          <ul>
+            <li><strong>Internet:</strong> required to load websites and other online content.</li>
+            <li><strong>Network state:</strong> used to check network connectivity.</li>
+            <li><strong>Read external storage (Android 12L / API 32 and earlier only):</strong> declared for legacy file access on older Android versions. Android's file and media access behavior varies by OS version.</li>
+          </ul>
+          <p>
+            The reviewed manifest does not declare permissions for precise location, camera,
+            microphone or contacts. Websites may still ask for information directly through their
+            own pages; do not provide it unless you trust the website.
+          </p>
+          <p>
+            The app can open supported local HTML, MHTML and PDF files shared with it. Be cautious
+            with files from unknown sources. The browser's local-file viewing features may grant
+            local documents access needed to render their content.
+          </p>
+        </section>
+
+        <section id="children">
+          <h2>7. Children and teen users</h2>
+          <p>
+            Https Browser is designed to be useful to a broad learning audience, including ages
+            5–16. Younger users should browse with a parent, guardian or teacher who can help
+            choose suitable websites and explain safe online behavior.
+          </p>
+          <p>
+            The reviewed app does not include child accounts, age verification, parental controls,
+            website-category filtering, or guaranteed safe-search enforcement. It is not certified
+            as a child-safe browser. Websites visited through the app may independently collect
+            personal information, show advertisements, or provide content that is not suitable
+            for every age.
+          </p>
+          <p>
+            Parents and guardians should supervise browsing, review the privacy practices of
+            websites children use, and avoid allowing children to share personal details with
+            unknown websites. If you believe a child has provided personal information to the
+            app publisher directly, contact the publisher using the contact details below.
+          </p>
+        </section>
+
+        <section id="choices">
+          <h2>8. Your choices and deleting information</h2>
+          <p>You can manage some information from within the app:</p>
+          <ul>
+            <li><strong>Browsing history and page files:</strong> use the app's clear-browsing-data control. The reviewed implementation clears the history database and saved page files.</li>
+            <li><strong>Cookies and website storage:</strong> use the clear-site-data control. The reviewed implementation removes WebView cookies and Web Storage data.</li>
+            <li><strong>Bookmarks, reading-list entries and saved sessions:</strong> remove these from their respective app screens. The general clear-browsing-data function does not currently delete all of these records.</li>
+            <li><strong>Network inspector records:</strong> clear the network panel or close/reset the relevant app state.</li>
+            <li><strong>Exported files:</strong> delete PDFs, page captures or other files you saved outside the app using the file manager or gallery where they were saved.</li>
+          </ul>
+          <p>
+            Clearing information in Https Browser does not delete information held by websites,
+            search providers, Android autofill services, other apps, or previously created device
+            backups. You may need to sign out of websites and use their own account/privacy tools
+            to remove data stored on their servers.
+          </p>
+          <p>
+            Uninstalling the app normally removes its app-private local data from the device.
+            This may not remove files you exported elsewhere or information that was included in
+            an Android/device backup.
+          </p>
+        </section>
+
+        <section id="security">
+          <h2>9. Security and safe browsing</h2>
+          <p>
+            Browser data is kept in Android app storage and WebView storage on the device. This
+            policy does not claim that every local database, cache file or website record is
+            separately encrypted by Https Browser. Protect your device with an appropriate screen
+            lock and keep Android and Android System WebView up to date.
+          </p>
+          <p>
+            Https Browser can open both HTTPS and HTTP websites. HTTPS helps protect data in transit
+            between your device and a website, but it does not make a website trustworthy or safe.
+            Avoid entering sensitive information on pages that do not use HTTPS, and leave
+            unfamiliar or suspicious websites.
+          </p>
+          <p>
+            Websites run their own scripts inside the browser. Since JavaScript and third-party
+            cookies are enabled in the reviewed configuration, only visit sites you trust.
+          </p>
+        </section>
+
+        <section id="retention">
+          <h2>10. Retention, backups and storage limits</h2>
+          <p>
+            Local browser records generally remain on the device until you delete them, clear the
+            relevant browser data, the app replaces them, or Android removes temporary/cache files.
+            Some temporary page captures and PDF files are stored in the app cache and may be
+            removed by Android when storage is needed.
+          </p>
+          <p>
+            The app manifest has Android backup enabled. Whether app data is included in a device
+            or cloud backup depends on Android version, device configuration and the user's backup
+            settings. If you use Android backup, browser data may be restored when the app is
+            reinstalled. Check your device's backup settings if you do not want app data backed up.
+          </p>
+          <p>
+            RootDeck does not set a separate server-side retention period for browsing records
+            in the reviewed implementation because the app does not appear to upload those records
+            to a publisher-operated service.
+          </p>
+        </section>
+
+        <section id="changes">
+          <h2>11. Changes to this policy</h2>
+          <p>
+            This policy may be updated when app features, data handling or applicable requirements
+            change. The latest version should be made available with the app or on its official
+            project page. The “Last updated” date at the top indicates when this document was
+            most recently revised.
+          </p>
+          <p>
+            If a future version introduces a new type of data collection or sharing, the policy
+            should explain that change before the updated version is released.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>12. Contact</h2>
+          <p>
+            For privacy questions or requests relating to Https Browser, contact the app publisher.
+            Do not post personal information, account details or private browsing records in a
+            public issue tracker.
+          </p>
+          <div class="contact-box">
+            <p><strong>Publisher:</strong> MD.Nirob (RootDeck)</p>
+            <p><strong>Project:</strong> <a href="https://github.com/Official-RootDeck/Https_Browser" target="_blank" rel="noopener noreferrer">github.com/Official-RootDeck/Https_Browser</a></p>
+            <p><strong>Privacy email:</strong> <a href="mailto:rootdeckdev01@gmail.com">rootdeckdev01@gmail.com</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/virus.exe.isback/" target="_blank" rel="noopener noreferrer">@virus.exe.isback</a></p>
+          </div>
+        </section>
+
+      </div>
+
+      <footer>
+        Https Browser · RootDeck · Privacy Policy · Last updated 18 November 2026
+      </footer>
+    </main>
+  </div>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script>
+    (() => {
+      const progress = document.getElementById('progress');
+      const backTop = document.getElementById('backTop');
+      const printButton = document.getElementById('printButton');
+      const themeButton = document.getElementById('themeButton');
+      const navToggle = document.getElementById('navToggle');
+      const toc = document.getElementById('toc');
+      const sections = [...document.querySelectorAll('#policyContent section')];
+      const tocLinks = [...document.querySelectorAll('#toc a')];
+
+      function applyTheme(theme) {
+        document.documentElement.dataset.theme = theme;
+        themeButton.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+        themeButton.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+      }
+
+      const savedTheme = (() => {
+        try { return localStorage.getItem('https-browser-policy-theme'); }
+        catch (_) { return null; }
+      })();
+      applyTheme(savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme
+        : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+
+      function updateScrollUI() {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        progress.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+        backTop.classList.toggle('visible', window.scrollY > 500);
+      }
+
+      function updateActiveLink() {
+        let activeId = '';
+        for (const section of sections) {
+          if (section.getBoundingClientRect().top <= 130) activeId = section.id;
+        }
+        tocLinks.forEach(link => {
+          const active = link.getAttribute('href') === `#${activeId}`;
+          link.classList.toggle('active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }
+
+
+      window.addEventListener('scroll', () => {
+        updateScrollUI();
+        updateActiveLink();
+      }, { passive: true });
+      window.addEventListener('resize', updateScrollUI);
+      printButton.addEventListener('click', () => window.print());
+      themeButton.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        try { localStorage.setItem('https-browser-policy-theme', next); } catch (_) {}
+      });
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!isExpanded));
+        navToggle.textContent = isExpanded ? 'Show' : 'Hide';
+        toc.hidden = isExpanded;
+      });
+      backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      tocLinks.forEach(link => link.addEventListener('click', () => {
+        link.blur();
+      }));
+
+      updateScrollUI();
+      updateActiveLink();
+    })();
+  </script>
+</body>
+      </html>
